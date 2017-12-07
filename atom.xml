@@ -6,22 +6,47 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-12-06T06:28:57.348Z</updated>
+  <updated>2017-12-07T07:44:17.702Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Tan You Ping</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CentOS7 下mysql 忘记root密码的处理方法</title>
+    <link href="http://yoursite.com/2017/12/07/index/"/>
+    <id>http://yoursite.com/2017/12/07/index/</id>
+    <published>2017-12-07T05:44:38.864Z</published>
+    <updated>2017-12-07T07:44:17.702Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.vi /etc/my.cnf</p><p>2.添加</p><p>skip-grant-tables<br>datadir=/var/lib/mysql<br>socket=/var/lib/mysql/mysql.sock</p><p>3.重启mysql</p><p>systemctl restart mysqld</p><p>4.用户无密码登录</p><p>mysql -u root -p (直接点击回车，密码为空)</p><p>5.选择数据库</p><p>use mysql;</p><p>6.修改root密码</p><p>update user set authentication_string=password(‘123456′) where user=’root’;</p><p>7.执行</p><p>flush privileges;</p><p>8.退出</p><p>exit;</p><p>9.删除</p><p>skip-grant-tables<br>datadir=/var/lib/mysql<br>socket=/var/lib/mysql/mysql.sock</p><p>10.重启mysql</p><p>systemctl restart mysqld</p><p>这样就ok了呢。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.vi /etc/my.cnf&lt;/p&gt;
+&lt;p&gt;2.添加&lt;/p&gt;
+&lt;p&gt;skip-grant-tables&lt;br&gt;datadir=/var/lib/mysql&lt;br&gt;socket=/var/lib/mysql/mysql.sock&lt;/p&gt;
+&lt;p&gt;3.重启mysql&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2017/12/06/hello-world/"/>
     <id>http://yoursite.com/2017/12/06/hello-world/</id>
     <published>2017-12-06T06:28:57.348Z</published>
-    <updated>2017-12-06T06:28:57.348Z</updated>
+    <updated>2017-12-07T03:16:24.165Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     

@@ -3,7 +3,7 @@
 
 
 
-<html class="theme-next pisces" lang="">
+<html class="theme-next pisces" lang="default">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -119,6 +119,7 @@
 <meta property="og:title">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title">
 
@@ -139,7 +140,7 @@
     site: {
       title: '',
       subtitle: '',
-      author: 'John Doe'
+      author: 'Tan You Ping'
     },
     duoshuo: {
       userId: '0',
@@ -192,7 +193,7 @@
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-48084758-7', 'auto');
+  ga('create', '[object Object]', 'auto');
   ga('send', 'pageview');
 </script>
 
@@ -202,7 +203,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -325,7 +326,7 @@
   </div>
 </div>
 <div class="site-master" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-master-avatar" itemprop="image" src="/images/DIYgod.jpg" alt="John Doe" />
+    <img class="site-master-avatar" itemprop="image" src="/images/DIYgod.jpg" alt="Tan You Ping" />
     <h2 class="site-master-description" itemprop="description">
         
     </h2>
@@ -356,6 +357,153 @@
   
   <div class="post-date">
 			<div class="post-month">12月</div>
+			<div class="post-day">07</div>
+	</div>
+  
+
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/07/index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tan You Ping">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/DIYgod.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/07/index/" itemprop="url">CentOS7 下mysql 忘记root密码的处理方法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-07T13:44:38+08:00">
+                2017-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>1.vi /etc/my.cnf</p>
+<p>2.添加</p>
+<p>skip-grant-tables<br>datadir=/var/lib/mysql<br>socket=/var/lib/mysql/mysql.sock</p>
+<p>3.重启mysql</p>
+<p>systemctl restart mysqld</p>
+<p>4.用户无密码登录</p>
+<p>mysql -u root -p (直接点击回车，密码为空)</p>
+<p>5.选择数据库</p>
+<p>use mysql;</p>
+<p>6.修改root密码</p>
+<p>update user set authentication_string=password(‘123456′) where user=’root’;</p>
+<p>7.执行</p>
+<p>flush privileges;</p>
+<p>8.退出</p>
+<p>exit;</p>
+<p>9.删除</p>
+<p>skip-grant-tables<br>datadir=/var/lib/mysql<br>socket=/var/lib/mysql/mysql.sock</p>
+<p>10.重启mysql</p>
+<p>systemctl restart mysqld</p>
+<p>这样就ok了呢。</p>
+
+            <div class="post-button text-center">
+              <a class="btn" href="/2017/12/07/index/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-date">
+			<div class="post-month">12月</div>
 			<div class="post-day">06</div>
 	</div>
   
@@ -364,7 +512,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Tan You Ping">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/DIYgod.jpg">
     </span>
@@ -548,7 +696,7 @@
             
               <img class="site-author-image" itemprop="image"
                 src="/images/card.jpg"
-                alt="John Doe" />
+                alt="Tan You Ping" />
             
               <p class="site-author-name" itemprop="name"><span style="opacity:.2;">网红</span>DIYgod</p>
               <p class="site-description motion-element" itemprop="description">你能抓到我么？</p>
@@ -606,7 +754,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -658,7 +806,7 @@
     <a href="/sitemap.xml" target="_blank">站点地图</a>.
     xxxx.
 </p>
-<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">John Doe</span>. </p>
+<p>Made with <i class="fa fa-heart throb" style="color: #d43f57;"></i> by <span class="author" itemprop="copyrightHolder">Tan You Ping</span>. </p>
 
         
 
